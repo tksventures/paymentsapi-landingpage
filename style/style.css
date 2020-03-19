@@ -711,6 +711,7 @@ nav.navbar.bootsnav .title {
 nav.navbar.bootsnav .title i {
     color: #456bca;
     padding-right: 4px;
+    width: auto;
 }
 
 nav.navbar.bootsnav ul.nav>li>a {
