@@ -9,3 +9,6 @@
 .padding-bottom10 {
     padding-bottom: 20px;
 }
+.input-dark {
+    background-color: #1c2746 !important;
+}
