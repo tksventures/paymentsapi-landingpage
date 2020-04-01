@@ -23,16 +23,17 @@
     <!-- main responsive css file -->
     <link rel="stylesheet" href="style/responsive.css">
     <!-- CSS FILES end -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-	<script>
+	<script type="text/javascript">
 $(document).ready(function() {
-    var $tabContent = $(".tab-pane"),
+    var $tabContent = $(".tab-content"),
         $tabs = $("ul.tabs li"),
         tabId;
 
-    $tabContent.hide();
+    /* $tabContent.hide();
     $("ul.tabs li:first").addClass("active").show();
-    $tabContent.first().show();
+    $tabContent.first().show(); */
 
     $tabs.click(function() {
         var $this = $(this);
@@ -45,7 +46,7 @@ $(document).ready(function() {
     });
 
     // Grab the ID of the .tab-content that the hash is referring to
-    tabId = $(window.location.hash).closest('.tab-pane').attr('id');
+    tabId = $(window.location.hash).closest('.tab-content').attr('id');
 
     // Find the anchor element to "click", and click it
     $tabs.find('a[href=#' + tabId + ']').click();
@@ -231,6 +232,8 @@ $(function() {
                                         </div>
                                     </div>
 <!-- end col-3 --><!-- end col-3 -->
+									
+									
                                 </div><!-- end row -->
                             </li>
 							
