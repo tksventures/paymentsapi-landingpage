@@ -51,11 +51,29 @@ $(document).ready(function() {
     // Find the anchor element to "click", and click it
     $tabs.find('a[href=#' + tabId + ']').click();
 
-    $('#mnbLink').click(() => {
+    $('#tokesLink1,#tokesLink2,#tokesLink3').click(() => {
         $('html, body').animate({
             scrollTop: $('#tokesTab').offset().top
         });
         $('#tokesTab').click();
+    });
+	$('#cubedLink').click(() => {
+        $('html, body').animate({
+            scrollTop: $('#cubedTab').offset().top
+        });
+        $('#cubedTab').click();
+    });
+	$('#kycLink').click(() => {
+        $('html, body').animate({
+            scrollTop: $('#kycTab').offset().top
+        });
+        $('#kycTab').click();
+    });
+	$('#howitLink').click(() => {
+        $('html, body').animate({
+            scrollTop: $('#howitTab').offset().top
+        });
+        $('#howitTab').click();
     });
 });
 
@@ -217,11 +235,11 @@ $(function() {
                                         <h6 class="title"><i class="fas fa-cube"></i> Tokes Ecosystem</h6>
                                         <div class="content">
                                             <ul class="menu-col">
-                                                <li><a id="mnbLink" href="#tokenomics" goto="menu3">Mint &amp; Burn Protocol</a></li>
-                                                <li><a href="#">Waves Blockchain</a></li>
-                                                <li><a href="#">Merchant App Ecosystem</a></li>
+                                                <li><a id="tokesLink1" href="#tokenomics">Mint &amp; Burn Protocol</a></li>
+                                                <li><a id="tokesLink2" href="#tokenomics">Waves Blockchain</a></li>
+                                                <li><a id="cubedLink" href="#tokenomics">Merchant App Ecosystem</a></li>
                                                 <li><a href="#pricing-plans">Cubed™ Merchant Whitelabeling <span class="badge-link">Offer</span></a></li>
-                                                <li><a href="#">On-site Smart ATMs</a></li>
+                                                <li><a id="tokesLink3" href="#tokenomics">On-site Smart ATMs</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -646,10 +664,10 @@ $(function() {
                     <div class="arrow-down">
                         <div class="arrow-down-inner"></div>
                     </div>
-                    <a data-toggle="tab" href="#home">How It Works</a>
+                    <a id="howitTab" data-toggle="tab" href="#home">How It Works</a>
                 </li>
-                <li><a data-toggle="tab" href="#menu1">Cubed™ Point-of-Sale</a></li>
-                <li><a data-toggle="tab" href="#menu2">KYC &amp; Custodianship</a></li>
+                <li><a id="cubedTab" data-toggle="tab" href="#menu1">Cubed™ Point-of-Sale</a></li>
+                <li><a id="kycTab" data-toggle="tab" href="#menu2">KYC &amp; Custodianship</a></li>
                 <li><a id="tokesTab" data-toggle="tab" href="#menu3">Tokes (TKS)</a></li>
             </ul>
         </div>
