@@ -51,19 +51,19 @@ $(document).ready(function() {
     // Find the anchor element to "click", and click it
     $tabs.find('a[href=#' + tabId + ']').click();
 
-    $('#tokesLink1,#tokesLink2,#tokesLink3').click(() => {
+    $('#tokesLink1,#tokesLink2,#tokesLink3,#tokesLink4,#tokesLink5,#tokesLink6').click(() => {
         $('html, body').animate({
             scrollTop: $('#tokesTab').offset().top
         });
         $('#tokesTab').click();
     });
-	$('#cubedLink').click(() => {
+	$('#cubedLink1,#cubedLink2,#cubedLink3,#cubedLink4,#cubedLink5').click(() => {
         $('html, body').animate({
             scrollTop: $('#cubedTab').offset().top
         });
         $('#cubedTab').click();
     });
-	$('#kycLink').click(() => {
+	$('#kycLink1,#kycLink2,#kycLink3,#kycLink4,#kycLink5').click(() => {
         $('html, body').animate({
             scrollTop: $('#kycTab').offset().top
         });
@@ -237,8 +237,8 @@ $(function() {
                                             <ul class="menu-col">
                                                 <li><a id="tokesLink1" href="#tokenomics">Mint &amp; Burn Protocol</a></li>
                                                 <li><a id="tokesLink2" href="#tokenomics">Waves Blockchain</a></li>
-                                                <li><a id="cubedLink" href="#tokenomics">Merchant App Ecosystem</a></li>
-                                                <li><a href="#pricing-plans">Cubed™ Merchant Whitelabeling <span class="badge-link">Offer</span></a></li>
+                                                <li><a id="cubedLink1" href="#tokenomics">Merchant App Ecosystem</a></li>
+                                                <li><a id="cubedLink2">Cubed™ Merchant Whitelabeling <span class="badge-link">Offer</span></a></li>
                                                 <li><a id="tokesLink3" href="#tokenomics">On-site Smart ATMs</a></li>
                                             </ul>
                                         </div>
@@ -380,10 +380,10 @@ $(function() {
 								<div class="tabs-switcher animated fadeInUp">
                             <ul class="nav nav-tabs">
                                 <li >
-                                    <a href="#wordpress" class="green-color">View API Documentation</a>
+                                    <a href="https://documenter.getpostman.com/view/3333316/RVu2nqbn?version=latest" class="green-color">View API Documentation</a>
                                 </li>
-                                <li><a href="#how-it-works">How it Works</a></li>
-                                <li><a data-toggle="tab" href="#menu2">KYC &amp; Custody</a></li>
+                                <li><a id="howitLink" href="#howitTab">How it Works</a></li>
+                                <li><a id="kycLink1" href="#kycTab1">KYC &amp; Custody</a></li>
                             </ul>
                         </div>
                             </div>
@@ -718,7 +718,7 @@ $(function() {
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="text animated fadeInRight">
                                 <div class="tab-title">
-                                    <h3>Cubed™ Merchant Services Platform&nbsp;</h3>
+                                    <h3>Cubed™ Merchant Services Platform</h3>
                                     <p>Built for cryptocurrency from the ground up, Cubed™ offers a full range of merchant services and apps to get you transacting in crypto immediately.</p>
                                 </div>
                                 <div class="tab-lists">
@@ -740,7 +740,7 @@ $(function() {
                                         <i class="fa fa-check pull-left" data-aos="zoom-in" data-aos-delay="200"></i>
                                         <div class="text">
                                             <h4>Whitelabeling Options Available</h4>
-                                            <p>Get your brand out there backed by powerful merchant software by whitelabeling our Cubed™ Merchant Software Package.&nbsp; &nbsp;</p>
+                                            <p>Get your brand out there backed by powerful merchant software through whitelabeling with our <a href="#pricing-plans" class="green-color">Cubed™ Merchant Software Package.&nbsp; &nbsp;</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -925,9 +925,7 @@ $(function() {
                     <div class="box">
                         <img data-aos="zoom-in" src="images/other/pointofsale.svg" class="img-responsive img-center" alt="Hosting">
                         <h4>Cubed™ Point-of-Sale</h4>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered
-                            alteration in some form</p>
+                        <p>Accept cryptocurrency alongside conventional cash and credit payment options.</p>
                         <a href="https://cubedpay.io" target="_blank" class="btn btn-green btn-small"> Get Cubed™ </a>
                     </div>
                 </div>
@@ -936,9 +934,7 @@ $(function() {
                         <img data-aos="zoom-in" data-aos-delay="100" src="images/other/wallet.svg" class="img-responsive img-center"
                             alt="Hosting">
                         <h4>Cubed™ Consumer Wallet</h4>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered
-                            alteration in some form</p>
+                      <p>Cubed™ provides an easy onramp for user acquisition of digital currencies to their mobile wallet.</p>
                         <a href="https://cubedpay.io" target="_blank"  class="btn btn-green btn-small"> Get&nbsp;Cubed™</a>
                     </div>
                 </div>
@@ -947,9 +943,7 @@ $(function() {
                         <img data-aos="zoom-in" data-aos-delay="200" src="images/other/kiosk.svg" class="img-responsive img-center"
                             alt="Hosting">
                         <h4>Physical Kiosk</h4>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered
-                            alteration in some form</p>
+                        <p>Our software is compatible with typical kiosk hardware. iOS, Android and Desktop supported.&nbsp; &nbsp;</p>
                         <a href="https://cubedpay.io" target="_blank"  class="btn btn-green btn-small"> Get Cubed™ </a>
                     </div>
                 </div>
@@ -958,9 +952,7 @@ $(function() {
                         <img data-aos="zoom-in" data-aos-delay="300" src="images/other/whitelabel.svg" class="img-responsive img-center"
                             alt="Hosting">
                         <h4>Whitelabeling Options</h4>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered
-                            alteration in some form</p>
+                        <p>We can build a white-label version for any of our software products for your business to deploy.</p>
                         <a href="https://cubedpay.io" target="_blank"  class="btn btn-green btn-small"> Get Cubed™ </a>
                     </div>
                 </div>
@@ -1229,45 +1221,45 @@ $(function() {
                 <div class="col-sm-2">
                     <h4>CRYPTO Payments API&nbsp;</h4>
                     <ul>
-                      <li><a href="#">View API Documentation</a></li>
+                      <li><a href="https://documenter.getpostman.com/view/3333316/RVu2nqbn?version=latest" target="_blank">View API Documentation</a></li>
                         <li><a href="#">Register Account NOW</a></li>
-                        <li><a href="#">Accept Bitcoin, Tokes, Alts</a></li>
-                        <li><a href="#">Merchant Point-of-Sale</a></li>
-                        <li><a href="#">KYC/AML Compliance&nbsp;</a></li>
-                        <li><a href="#">Optional Custodianship</a></li>
-                        <li><a href="#">Trade Processing</a></li>
-                        <li><a href="#">Price Conversion</a></li>
+                        <li><a href="#features">Accept Bitcoin, Tokes, Alts</a></li>
+                        <li><a id="cubedLink3" href="#">Merchant Point-of-Sale</a></li>
+                        <li><a id="kycLink2" href="#">KYC/AML Compliance&nbsp;</a></li>
+                        <li><a id="kycLink3" href="#">Optional Custodianship</a></li>
+                        <li><a href="#features">Trade Processing</a></li>
+                        <li><a href="#features">Price Conversion</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2">
                   <h4>Pricing Plans&nbsp;</h4>
                     <ul>
-                      <li><a href="#">FREE API Only Plan</a></li>
-                        <li><a href="#">Premium Plan&nbsp;</a></li>
-                        <li><a href="#">Cubed™ Package</a></li>
+                      <li><a href="#pricing-plans">FREE API Only Plan</a></li>
+                        <li><a href="#pricing-plans">Premium Plan&nbsp;</a></li>
+                        <li><a href="#pricing-plans">Cubed™ Package</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2">
                   <h4>Business Cases</h4>
                     <ul>
-                      <li><a href="#">Cubedpay.io</a></li>
-                        <li><a href="#">Tokes Platform</a></li>
-                        <li><a href="#">Multichain Ventures Wallet</a></li>
-                        <li><a href="#">Tokes.io</a></li>
-                        <li><a href="#">eCommerce Web Plugin</a></li>
-                        <li><a href="#">Shopify Integration</a></li>
+                      <li><a href="https://cubedpay.io" target="_blank">Cubedpay.io</a></li>
+                        <li><a href="https://tokesplatform.org" target="_blank">Tokes Platform</a></li>
+                        <li><a href="https://multichainventures.com/index.html#wallet" target="_blank">Multichain Ventures Wallet</a></li>
+                        <li><a href="https://tokes.io" target="_blank">Tokes.io</a></li>
+                        <li><a href="https://cubedpay.io/#features-1" target="_blank">eCommerce Web Plugin</a></li>
+                        <li><a href="#">Shopify Integration<span class="badge-link">TBA</span></a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2">
                     <h4>Developers</h4>
                     <ul>
-                      <li><a href="#">Integrate Tokes Payments</a></li>
-                        <li><a href="#">Dev Guided Setup</a></li>
-                        <li><a href="#">Webstore Integration</a></li>
-                        <li><a href="#">App Hosting via Reli</a></li>
-                        <li><a href="#">Tokes Tokenomics</a></li>
-                        <li><a href="#">On-site Smart ATMs</a></li>
-                        <li><a href="#">Software Whitelableing</a></li>
+                      <li><a href="https://documenter.getpostman.com/view/3333316/RVu2nqbn?version=latest" target="_blank">Integrate Tokes Payments</a></li>
+                        <li><a href="#pricing-plans">Dev Guided Setup</a></li>
+                        <li><a href="https://cubedpay.io/#features-1" target="_blank">Webstore Integration</a></li>
+                        <li><a href="https://reli.cloud" target="_blank">App Hosting via Reli</a></li>
+                        <li><a id="tokesLink4" href="#">Tokes Tokenomics</a></li>
+                        <li><a id="tokesLink5" href="#">On-site Smart ATMs</a></li>
+                        <li><a id="cubedLink4" href="#">Software Whitelableing</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2">
@@ -1295,12 +1287,12 @@ $(function() {
                             <h4>Quick Links</h4>
                         </div>
                         <ul>
-                            <li><a href="#">API Documentation</a></li>
-                            <li><a href="#">Cubed™</a></li>
+                            <li><a href="https://documenter.getpostman.com/view/3333316/RVu2nqbn?version=latest" target="_blank">API Documentation</a></li>
+                            <li><a href="https://cubedpay.io/" target="_blank">Cubed™</a></li>
                             <li><a href="#">Register NOW</a></li>
-                            <li><a href="#">Pricing Plans</a></li>
-                            <li><a href="#">Tokes Tokenomics</a></li>
-                            <li><a href="#">Multichain Ventures</a></li>
+                            <li><a href="#pricing-plans">Pricing Plans</a></li>
+                            <li><a id="tokesLink6" href="#">Tokes Tokenomics</a></li>
+                            <li><a href="https://multichain.ventures/" target="_blank">Multichain Ventures</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1315,22 +1307,21 @@ $(function() {
             <div class="row">
                 <div class="col-sm-8">
                     <div class="under_footer_links">
-                        <a href="#">About Us</a>
-                        <a href="#">Sitemap</a>
-                        <a href="#">Contact Us</a>
-                        <a href="#">Terms of services</a>
+                        <a href="https://multichain.ventures/" target="_blank">About Us</a>
+                        <a href="#contact">Contact Us</a>
+                        <a href="#">Terms of Services</a>
                         <a href="#">Privacy Policy</a>
                     </div>
                 </div>
                 <div class="col-sm-4 un_img">
                     <div class="col-sm-4">
-                        <a href="https://multichain.ventures/"> <img src="images/logo/mv-footer.svg" class="img-responsive" alt=""></a>
+                        <a href="https://multichain.ventures/" target="_blank"> <img src="images/logo/mv-footer.svg" class="img-responsive" alt=""></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="https://cubedpay.io/"> <img src="images/logo/cubed-footer.svg" class="img-responsive" alt=""></a>
+                        <a href="https://cubedpay.io/" target="_blank"> <img src="images/logo/cubed-footer.svg" class="img-responsive" alt=""></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="https://reli.cloud/"> <img src="images/logo/reli-footer.svg" class="img-responsive" alt=""></a>
+                        <a href="https://reli.cloud/" target="_blank"> <img src="images/logo/reli-footer.svg" class="img-responsive" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -1339,7 +1330,7 @@ $(function() {
     <div class="under-footer2">
         <div class="custom-width">
             <div class="row">
-                <p>Use of this Site is subject to express terms of use. By using this site, you signify that you agree
+                <p>Use of this site is subject to express terms of use. By using this site, you signify that you agree
                 to be bound by these terms.</p>
             </div>
         </div>
