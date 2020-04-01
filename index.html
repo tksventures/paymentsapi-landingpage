@@ -50,19 +50,13 @@ $(document).ready(function() {
 
     // Find the anchor element to "click", and click it
     $tabs.find('a[href=#' + tabId + ']').click();
-})
 
-$('a').not('.tabs li a').on('click', function(evt) {
-    evt.preventDefault();
-    var whereTo = $(this).attr('goto');
-    $tabs = $("ul.tabs li");
-    $tabs.find('a[href=#' + whereTo + ']').trigger('click');
-    //alert(attr('name'));
-//alert( $('#'+whereTo+' a').offset().top );
-    $('html, body').animate({
-        scrollTop: $('#'+whereTo+' a').offset().top
+    $('#mnbLink').click(() => {
+        $('html, body').animate({
+            scrollTop: $('#tokesTab').offset().top
+        });
+        $('#tokesTab').click();
     });
-
 });
 
 $(function() {
@@ -223,7 +217,7 @@ $(function() {
                                         <h6 class="title"><i class="fas fa-cube"></i> Tokes Ecosystem</h6>
                                         <div class="content">
                                             <ul class="menu-col">
-                                                <li><a href="#tokenomics" goto="menu3">Mint &amp; Burn Protocol</a></li>
+                                                <li><a id="mnbLink" href="#tokenomics" goto="menu3">Mint &amp; Burn Protocol</a></li>
                                                 <li><a href="#">Waves Blockchain</a></li>
                                                 <li><a href="#">Merchant App Ecosystem</a></li>
                                                 <li><a href="#pricing-plans">Cubed™ Merchant Whitelabeling <span class="badge-link">Offer</span></a></li>
@@ -656,7 +650,7 @@ $(function() {
                 </li>
                 <li><a data-toggle="tab" href="#menu1">Cubed™ Point-of-Sale</a></li>
                 <li><a data-toggle="tab" href="#menu2">KYC &amp; Custodianship</a></li>
-                <li><a data-toggle="tab" href="#menu3">Tokes (TKS)</a></li>
+                <li><a id="tokesTab" data-toggle="tab" href="#menu3">Tokes (TKS)</a></li>
             </ul>
         </div>
         <div class="custom-width">
