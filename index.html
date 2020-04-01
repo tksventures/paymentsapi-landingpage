@@ -23,7 +23,55 @@
     <!-- main responsive css file -->
     <link rel="stylesheet" href="style/responsive.css">
     <!-- CSS FILES end -->
-</head>
+
+	<script>
+$(document).ready(function() {
+    var $tabContent = $(".tab-pane"),
+        $tabs = $("ul.tabs li"),
+        tabId;
+
+    $tabContent.hide();
+    $("ul.tabs li:first").addClass("active").show();
+    $tabContent.first().show();
+
+    $tabs.click(function() {
+        var $this = $(this);
+        $tabs.removeClass("active");
+        $this.addClass("active");
+        $tabContent.hide();
+        var activeTab = $this.find("a").attr("href");
+        $(activeTab).fadeIn();
+        //return false;
+    });
+
+    // Grab the ID of the .tab-content that the hash is referring to
+    tabId = $(window.location.hash).closest('.tab-pane').attr('id');
+
+    // Find the anchor element to "click", and click it
+    $tabs.find('a[href=#' + tabId + ']').click();
+})
+
+$('a').not('.tabs li a').on('click', function(evt) {
+    evt.preventDefault();
+    var whereTo = $(this).attr('goto');
+    $tabs = $("ul.tabs li");
+    $tabs.find('a[href=#' + whereTo + ']').trigger('click');
+    //alert(attr('name'));
+//alert( $('#'+whereTo+' a').offset().top );
+    $('html, body').animate({
+        scrollTop: $('#'+whereTo+' a').offset().top
+    });
+
+});
+
+$(function() {
+    $('a.refresh').live("click", function() {
+        location.reload();
+    });
+});
+						</script>	
+	
+	</head>
 
 <body>
     <div id="fakeLoader"></div>
@@ -125,7 +173,7 @@
                                                 <li><a href="https://tokesplatform.org" target="_blank">Tokes Platform </a></li>
                                                 <li><a href="https://multichainventures.com/#wallet" target="_blank">Multichain Ventures Wallet</a></li>
                                                 <li><a href="https://cubedpay.io/#features-1" target="_blank">eCommerce Web Component</a></li>
-												<li><a href="#" target="_blank">Shopify Integration</a></li>
+												<li><a href="#" target="_blank">Shopify Integration<span class="badge-link">Upcoming</span></a></li>
 
                                             </ul>
                                         </div>
@@ -174,7 +222,7 @@
                                         <h6 class="title"><i class="fas fa-cube"></i> Tokes Ecosystem</h6>
                                         <div class="content">
                                             <ul class="menu-col">
-                                                <li><a href="#menu3">Mint &amp; Burn Protocol</a></li>
+                                                <li><a href="#tokenomics" goto="menu3">Mint &amp; Burn Protocol</a></li>
                                                 <li><a href="#">Waves Blockchain</a></li>
                                                 <li><a href="#">Merchant App Ecosystem</a></li>
                                                 <li><a href="#pricing-plans">Cubed™ Merchant Whitelabeling <span class="badge-link">Offer</span></a></li>
@@ -187,6 +235,9 @@
                             </li>
 							
                         </ul>
+						
+					
+						
                     </li>
                     <li class="dropdown">
 <ul class="dropdown-menu">
@@ -725,6 +776,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="text animated fadeInRight">
                                 <div class="tab-title">
+									<a name="tokenomics"></a>
                                     <h3>Toke (TKS) and the Tokes Ecosystem</h3>
                                     <p>Tokes(TKS) is the fundamental cryptocurrency that binds all of these products together. The ubiquituous reliance on Tokes creates a stable and thriving ecosystem.&nbsp; &nbsp;</p>
                                 </div>
