@@ -98,7 +98,7 @@ $(function() {
                 <a class="topbar-link" href="#"><i class="fa fa-envelope"></i>
                     contact@tokespay.com</a>
                 <a class="topbar-link hidden-xs" href="#"><i class="fa fa-phone"></i>1 (800) 201-1589</a>
-                <a class="topbar-link" href="../whmcs/clientarea.php"><i class="fa fa-user"></i> Register Now</a>
+                <a class="topbar-link" href="#"><i class="fa fa-user"></i> Register Now</a>
             </div>
         </div>
     </div>
@@ -391,25 +391,28 @@ $(function() {
                         </div>
 <div class="col-sm-4">
 	<h4 class="padding-bottom10 green-color padding-top10"><strong><i class="fa fa-coins"></i>&nbsp; ACCEPT CRYPTO PAYMENTS NOW</strong></h4>
-<form action="contact.php" method="post" id="contact-form">
-              <div class="messages"></div>
-                        <div class="form-group" data-aos="fade-up">
-                          <input id="form_email" type="email" name="email" class="form-control" placeholder="Your Email*"
-                                required="required" data-error="Valid email is required">
-                        </div>
-                        <div class="form-group form_left" data-aos="fade-up" data-aos-delay="100">
-<div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group" data-aos="fade-up" data-aos-delay="200"> </div>
-                        <div class="form-group" data-aos="fade-up" data-aos-delay="300">
-<div class="help-block with-errors"></div>
-                            <br>
-                            <button class="btn btn-green btn-large center-block bold-text" style="width:80%;"> <span class="fa fa-sign-in-alt"></span> &nbsp; Register Now </button>
-						  <p class="text-center" style="color:white; padding:10px 0px 13px 0px">&nbsp;  or sign up with  &nbsp;</p>
-                          <button class="btn btn-large center-block btn-blue" style="width:80%;"><span class="fab fa-google"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fab fa-facebook-f"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fab fa-github-alt"></span></button>
-
-                        </div>
-            </form>
+        <form action="javascript:goToRegistration()" id="registration-form">
+            <div class="messages"></div>
+            <div class="form-group" data-aos="fade-up">
+                <input id="emailRegistration" type="email" name="email" class="form-control" placeholder="Your Email*"
+                    required="required" data-error="Valid email is required">
+            </div>
+            <div class="form-group form_left" data-aos="fade-up" data-aos-delay="100">
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group" data-aos="fade-up" data-aos-delay="200"> </div>
+            <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+                <div class="help-block with-errors"></div>
+                <br>
+                <button type="submit" class="btn btn-green btn-large center-block bold-text" style="width:80%;"> <span
+                        class="fa fa-sign-in-alt"></span> &nbsp; Register Now </button>
+                <p class="text-center" style="color:white; padding:10px 0px 13px 0px">&nbsp; or sign up with &nbsp;</p>
+                <button onclick="goToRegistration()" class="btn btn-large center-block btn-blue" style="width:80%;"><span
+                        class="fab fa-google"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        class="fab fa-facebook-f"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        class="fab fa-github-alt"></span></button>
+            </div>
+        </form>
                       </div>
                   </div>
                     <div id="cloud" class="tab-pane">
@@ -638,15 +641,21 @@ $(function() {
                 </div>
                 <div class="col-sm-7">
                     <div class="domain-input">
-                        <form action="#">
+                        <form action="javascript:goToRegistration()">
                             <div class="form-group">
-                              <input style="padding-left:12px" placeholder="Enter your email to get started..." class="form-control" id="domain">
+                                <input style="padding-left:12px" placeholder="Enter your email to get started..." class="form-control" id="subEmailRegistration">
                                 <button class="btn btn-domain" type="submit">Register Now</button>
                             </div>
                             <div class="ltds">
                                 <p>BTC LTC DASH WAVES TKS</p>
                             </div>
                         </form>
+                        <script>
+                            function goToRegistration() {
+                                const email = $('#emailRegistration').val() || $('#subEmailRegistration').val();
+                                window.location.assign(`https://control-panel.payments.tokesplatform.org/login?emailRegistration=${email || 'sso'}`);
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
@@ -1147,31 +1156,56 @@ $(function() {
                 <p>We're ready to hear from you! Fill out the Contact Form below and someone from our team will respond right away!&nbsp; &nbsp;&nbsp; </p>
             </div>
 			<div>
-				
-<form action="contact.php" method="post" id="contact-form">
-                        <div class="messages"></div>
-                        <div class="form-group" data-aos="fade-up">
-                            <input id="form_name" type="text" name="name" class="form-control name input-dark" placeholder="Your First Name *"
-                                required="required" data-error="Firstname is required">
-                        </div>
-                        <div class="form-group form_left" data-aos="fade-up" data-aos-delay="100">
-                            <input id="form_email" type="email" name="email" class="form-control input-dark" placeholder="Your Email *"
-                                required="required" data-error="Valid email is required">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group" data-aos="fade-up" data-aos-delay="200">
-                            <input id="form_web" type="text" name="name" class="form-control input-dark" placeholder="Your Website ">
-                        </div>
-                        <div class="form-group" data-aos="fade-up" data-aos-delay="300">
-                            <textarea id="form_message" name="message" class="form-control input-dark" placeholder="Message for Us *"
-                                rows="4" required="required" data-error="Please leave us a message.."></textarea>
-                            <div class="help-block with-errors"></div>
-                            <br>
-                            <button class="btn btn-green btn-large"> <span class="fa fa-envelope"></span> Send your
-                                Message </button>
-                        </div>
-                    </form>
-                      </div>
+                <form action="javascript:submitContact()" id="contact-info-form">
+                    <div class="form-group" data-aos="fade-up">
+                        <input id="form_name" type="text" name="name" class="form-control name input-dark"
+                            placeholder="Your First Name *" required="required" data-error="Firstname is required">
+                    </div>
+                    <div class="form-group form_left" data-aos="fade-up" data-aos-delay="100">
+                        <input id="form_email" type="email" name="email" class="form-control input-dark" placeholder="Your Email *"
+                            required="required" data-error="Valid email is required">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="200">
+                        <input id="form_web" type="text" name="name" class="form-control input-dark" placeholder="Your Website ">
+                    </div>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+                        <textarea id="form_message" name="message" class="form-control input-dark" placeholder="Message for Us *"
+                            rows="4" required="required" data-error="Please leave us a message.."></textarea>
+                        <div class="help-block with-errors"></div>
+                        <br>
+                        <button class="btn btn-green btn-large"> <span class="fa fa-envelope"></span> Send your
+                            Message </button>
+                    </div>
+                    <div id="form_notification" class="messages"></div>
+                </form>
+                <script>
+                    function submitContact(e) {
+                        $.ajax({
+                            url:'https://formspree.io/xbjzjebq',
+                            method:'POST',
+                            data:{
+                                name: $('#form_name').val(),
+                                _replyto: $('#form_email').val(),
+                                website: $('#form_web').val(),
+                                message: $('#form_message').val(),
+                                source: 'Tokes Payments API Landing Page'
+                            },
+                            dataType:"json",
+                            error: () => {
+                                $('#form_notification').html("Something went wrong, try again later!")
+                            },
+                            success: () => {
+                                $('#form_name').val(''),
+                                $('#form_email').val(''),
+                                $('#form_web').val(''),
+                                $('#form_message').val(''),
+                                $('#form_notification').html("We've received the information you entered.  Thank you!")
+                            }	
+                        });
+                    }
+                </script>
+            </div>
 			</div>
             <div class="row">
                 <div class="partners">
